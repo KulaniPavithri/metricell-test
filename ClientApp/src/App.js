@@ -1,6 +1,7 @@
 import React from 'react';
 import Employees from "./Employees";
 import EmployeeSumList from "./EmployeeSumList";
+import "./style/index.css";
 
 const App = () => {
 
@@ -162,39 +163,61 @@ const App = () => {
             
             <h2>Employees Data...</h2>
 
-            <form>
-                <label>Name: </label>
-                <input
-                    type="text" name="name"
-                    id="name" value={name}
-                    onChange={handleName}
-                />
+            <div className="emp-info">
+                <form>
+                    <div className="form-group">
+                        <label>Employee Name </label>
+                        <input
+                            class="form-control"
+                            type="text" name="name"
+                            id="name" value={name}
+                            onChange={handleName}
+                            />
+                    </div>
 
-                <label>Value: </label>
-                <input
-                    type="text" name="value"
-                    id="value" value={value}
-                    onChange={handleValue}
-                />
-                <button onClick={handleCreate}>Create</button>
-                <button onClick={handleUpdate}>Update</button>
-            </form>
+                    <div className="form-group">
+                        <label>Value </label>
+                        <input
+                            class="form-control"
+                            type="text" name="value"
+                            id="value" value={value}
+                            onChange={handleValue}
+                            />
+                    </div>
+                </form>
 
-            <div>
-                <button onClick={handleIncrement}>Increment Employee Values</button>
+                <div className="buttons">
+                    <div>
+                        <button className="btn btn-primary btn-sm" onClick={handleCreate}>Create</button>
+                    </div>
+                    <div>
+                        <button className="btn btn-primary btn-sm" onClick={handleUpdate}>Update</button>
+                    </div>
+                </div>
             </div>
 
-            <h3>Sum of Employee values where names begin with </h3>
-            <div>
-                <button onClick={handleSum}>Sum of Employee Values</button>
-            </div>
+            <div className="emp-queries">
+                <div>
+                    <p>Employee Queries</p>
+                </div>
 
-            <div>
-                {sum && <EmployeeSumList />}
+                <div>
+                    <button className="btn btn-primary mb-3 btn-sm" onClick={handleIncrement}>Increment Employee Values</button>
+                </div>
+
+                <div>
+                    <button className="btn btn-primary mb-3 btn-sm" onClick={handleSum}>Sum of Employee Values</button>
+                </div>
+
+                <div>
+                    {sum && <EmployeeSumList />}
                  
+                </div>
             </div>
 
-            <Employees viewEmployee={viewEmployee} deleteEmployee={deleteEmployee } />
+            <div className="employee-data">
+                <Employees viewEmployee={viewEmployee} deleteEmployee={deleteEmployee} />
+            </div>
           </div>
     );
   

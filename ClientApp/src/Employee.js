@@ -16,8 +16,10 @@ const Employee = (props) => {
                 <td>{props.employee.id}</td>
                 <td>{props.employee.name}</td>
                 <td>{props.employee.value}</td>
-                <td><button onClick={deleteEmp}>Delete</button></td>
-                <td><button onClick={viewEmp}>View</button></td>
+                <td className="d-flex justify-content-around">
+                    <button className="btn btn-primary btn-sm" onClick={deleteEmp}>Delete</button>
+                    <button className="btn btn-primary btn-sm" onClick={viewEmp}>View</button>
+                </td>
             </tr>
         </>
         );

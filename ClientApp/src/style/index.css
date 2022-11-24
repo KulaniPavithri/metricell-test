@@ -1,0 +1,38 @@
+﻿body{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+}
+
+.emp-info{
+    width: 400px;
+    border: 1px solid;
+    margin-bottom: 5px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 5px;
+    margin-top: 3px;
+}
+
+.buttons button{
+    margin-right: 3px;
+}
+
+.emp-queries {
+    width: 600px;
+    border: 1px solid;
+    margin-bottom: 5px;
+}
+
+.emp-queries p{
+    font-size: 15px;
+    margin-bottom: 3px;
+}
+
+.employee-data{
+    width: 600px;
+}

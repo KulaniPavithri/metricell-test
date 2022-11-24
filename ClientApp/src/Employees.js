@@ -27,13 +27,13 @@ const Employees = (props) => {
 
     return (
         <div>
-            <table>
-                <thead>
+            <table className="table table-bordered mt-3 table-sm">
+                <thead class="thead-dark">
                     <tr>
-                        <th>Id</th>
-                        <th>Name</th>
-                        <th>Value</th>
-
+                        <th scope="col">Id</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Value</th>
+                        <th scope="col">Options</th>
                     </tr>
                 </thead>
                 <tbody>

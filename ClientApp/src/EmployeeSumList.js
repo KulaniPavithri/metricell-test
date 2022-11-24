@@ -27,11 +27,11 @@ const EmployeeSumList = () => {
 
     return (
         <div>
-            <table>
-                <thead>
+            <table className="table table-bordered mt-3 mb-3 table-sm">
+                <thead class="thead-dark">
                     <tr>
-                        <th>First Letter of Name</th>
-                        <th>Sum of Values</th>
+                        <th scope="col">First Letter of Name</th>
+                        <th scope="col">Sum of Values</th>
 
                     </tr>
                 </thead>
