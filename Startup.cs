@@ -5,6 +5,7 @@ using Microsoft.Data.Sqlite;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
 
 namespace InterviewTest
 {
@@ -73,14 +74,14 @@ namespace InterviewTest
                 delTableCmd.ExecuteNonQuery();
 
                 var createTableCmd = connection.CreateCommand();
-                createTableCmd.CommandText = "CREATE TABLE Employees(Name VARCHAR(50), Value INT)";
+                createTableCmd.CommandText = "CREATE TABLE Employees(Id INTEGER PRIMARY KEY, Name VARCHAR(50), Value INT)";
                 createTableCmd.ExecuteNonQuery();
 
                 //Fill with data
                 using (var transaction = connection.BeginTransaction())
                 {
                     var insertCmd = connection.CreateCommand();
-                    insertCmd.CommandText = @"INSERT INTO Employees VALUES
+                    insertCmd.CommandText = @"INSERT INTO Employees(Name, Value) VALUES
                         ('Abul', 1357),
                         ('Adolfo', 1224),
                         ('Alexander', 2296),
