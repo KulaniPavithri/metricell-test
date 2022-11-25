@@ -10,8 +10,9 @@ Implemented functionalities.
 	- Increment value by 100 WHERE Name NOT LIKE 'E%' AND Name NOT LIKE 'G%'
 5. Retrieve list data - summation of values where employee name begins with A or B or C and sum of values greater than or equal to 11171
 
-Improvements that can be added:
 note: this implementation focued on developing given main functionalities. Due to time constraints I didn't have time to implement following improvements.
+
+Improvements that can be added:
 1. Front end - user interface design and UX experience can  be improved by adding validation, pagination, navigation, UX accessebility and best practices, etc.
 2. Service layer's API method parameters could be sanitized to prevent SQL injection
 3. Business logic can be improved by introducing two new layers - services and repository
